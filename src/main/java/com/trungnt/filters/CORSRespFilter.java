@@ -1,0 +1,23 @@
+package com.trungnt.filters;
+
+import java.io.IOException;
+
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerResponseContext;
+import javax.ws.rs.container.ContainerResponseFilter;
+import javax.ws.rs.ext.Provider;
+
+@Provider
+public class CORSRespFilter implements ContainerResponseFilter {
+
+  @Override
+  public void filter(ContainerRequestContext reqContext, ContainerResponseContext resContext)
+      throws IOException {
+    resContext.getHeaders().add("Access-Control-Allow-Origin", "*");
+    resContext.getHeaders().add("Access-Control-Allow-Headers",
+        "origin, content-type, accept, authorization");
+    resContext.getHeaders().add("Access-Control-Allow-Credentials", "true");
+    resContext.getHeaders().add("Access-Control-Allow-Methods", "GET, POST, OPTIONS, HEAD");
+  }
+
+}
