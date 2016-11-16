@@ -1,6 +1,6 @@
-package com.tsol.smarteda.pentanalyzer.util;
+package com.trungnt.util;
 
-import com.tsol.smarteda.pentanalyzer.model.ResponseMessage;
+import com.trungnt.model.ResponseMessage;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -24,6 +24,5 @@ public class ResponseUtils {
   }
 
   public static final String INTERNAL_SERVER_ERROR_MSG = "Internal server error";
-  public static final String NOT_AUTHORIZED_MSG = "Invalid token";
 
 }
