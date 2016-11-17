@@ -1,17 +1,27 @@
 package com.trungnt.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RequestData {
   @JsonProperty("startDate")
   private String startDate;
   @JsonProperty("endDate")
   private String endDate;
 
+  /**
+   * constructor function without parameters
+   */
   public RequestData() {
 
   }
 
+  /**
+   * constructor function with parameters
+   * @param startDate
+   * @param endDate
+   */
   public RequestData(String startDate, String endDate) {
     super();
     this.startDate = startDate;

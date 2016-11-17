@@ -9,6 +9,6 @@ public class MyResourceConfigApp extends ResourceConfig {
   public MyResourceConfigApp() {
     packages("com.trungnt.resource");
     register(com.trungnt.filters.CORSRespFilter.class);
-
+    register(com.trungnt.filters.RequestFilter.class);
   }
 }
